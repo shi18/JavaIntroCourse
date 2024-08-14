@@ -1,6 +1,5 @@
 package basicWritingRule;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
 /*
 public : 类的修饰词
 class: 表明这是一个类

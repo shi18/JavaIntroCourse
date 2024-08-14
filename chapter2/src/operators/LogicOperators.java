@@ -1,7 +1,5 @@
 package operators;
 
-import java.sql.SQLOutput;
-
 public class LogicOperators {
     public static void main(String[] args) {
         /*logic and && */

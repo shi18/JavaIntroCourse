@@ -1,6 +1,5 @@
 package selectionStructureStatement;
 
-import java.util.Scanner;
 /*
     if(关系表达式){
         语句体;
