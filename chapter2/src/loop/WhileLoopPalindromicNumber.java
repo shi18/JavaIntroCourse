@@ -1,6 +1,5 @@
 package loop;
 
-import java.lang.reflect.Parameter;
 import java.util.Scanner;
 //palindromic 回文的，复发的
 public class WhileLoopPalindromicNumber {
