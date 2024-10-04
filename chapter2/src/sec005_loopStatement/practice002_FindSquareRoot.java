@@ -2,7 +2,7 @@ package sec005_loopStatement;
 
 import java.util.Scanner;
 
-public class FindSquareRoot {
+public class practice002_FindSquareRoot {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个整数，按回车键结束：");

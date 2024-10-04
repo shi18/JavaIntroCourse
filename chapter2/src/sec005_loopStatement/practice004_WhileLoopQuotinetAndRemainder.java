@@ -2,7 +2,7 @@ package sec005_loopStatement;
 
 import java.util.Scanner;
 
-public class WhileLoopQuotinetAndRemainder {
+public class practice004_WhileLoopQuotinetAndRemainder {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入被除数dividend： ");

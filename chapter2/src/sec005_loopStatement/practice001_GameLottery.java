@@ -2,7 +2,7 @@ package sec005_loopStatement;
 
 import java.util.Scanner;
 
-public class GameLottery {
+public class practice001_GameLottery {
     public static void main(String[] args) {
         int range = 8;
         //math.random -->> [0,) 左闭右开区间

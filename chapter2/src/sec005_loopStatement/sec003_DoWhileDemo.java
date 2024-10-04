@@ -1,6 +1,6 @@
 package sec005_loopStatement;
 
-public class DoWhileDemo {
+public class sec003_DoWhileDemo {
     public static void main(String[] args) {
         //在编写游戏逻辑时，通常希望游戏循环至少运行一次，
         //以初始化游戏状态或显示初始界面

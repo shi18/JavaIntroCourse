@@ -1,6 +1,6 @@
 package sec005_loopStatement;
 // 此节练习在于运用for循环中添加不同的限制条件，以达到程序的预期结果。
-public class ForLoopSum {
+public class sec002_ForLoopSum {
     public static void main(String[] args) {
         int sum = 0;
         for(int i = 1; i <= 100; i++){

@@ -2,7 +2,7 @@ package sec007_array;
 
 import java.util.Arrays;
 
-public class TwoDimensionArray {
+public class sec003_TwoDimensionArray {
     public static void main(String[] args) {
         int[][] arr = new int[3][];
         // 返回值为null，代表三个位置指向的空间地址为null，我们还没有给对应的列初始化
