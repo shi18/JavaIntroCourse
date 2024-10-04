@@ -6,7 +6,7 @@ import java.util.Scanner;
 请输入一个1-100范围内的整数，
 控制台输出： 输入的数字是奇数返回true，是偶数返回false
 */
-public class IfElseStatement {
+public class P002_IfElseStatement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个1-100范围内的整数：");

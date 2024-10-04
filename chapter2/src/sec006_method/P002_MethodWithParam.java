@@ -1,6 +1,6 @@
 package sec006_method;
 
-public class MethodWithParam {
+public class P002_MethodWithParam {
     public static void main(String[] args) {
         int a = 10;
         int b = 20;

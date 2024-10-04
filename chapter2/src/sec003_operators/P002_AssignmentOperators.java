@@ -1,6 +1,6 @@
 package sec003_operators;
 
-public class AssignmentOperators {
+public class P002_AssignmentOperators {
     public static void main(String[] args) {
         int a = 10;
         int b = 3;

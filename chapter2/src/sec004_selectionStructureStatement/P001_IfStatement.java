@@ -10,7 +10,7 @@ package sec004_selectionStructureStatement;
         2.在语句体中，如果只有一句代码，大括号可以省略不写。个人建议，大括号还是不要省略
         3.如果对一个布尔类型的变量进行判断，不要用==号，直接把变量写在小括号即可
 */
-public class IfStatement {
+public class P001_IfStatement {
     public static void main(String[] args) {
         /* int number = 20;
        if(number >= 10)

@@ -2,7 +2,7 @@ package sec007_array;
 
 import java.util.Arrays;
 
-public class sec002_AccessArray {
+public class P002_AccessArray {
     public static void main(String[] args) {
         //思考如何把数组的值打印？
         //普通的数据变量打印如下

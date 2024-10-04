@@ -1,6 +1,6 @@
 package sec006_method;
 
-public class CircleArea {
+public class P005_CircleArea {
     public static void main(String[] args) {
         int r = 10;
         double pie = 3.14;

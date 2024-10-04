@@ -1,6 +1,6 @@
 package sec003_operators;
 
-public class LogicOperators {
+public class P004_LogicOperators {
     public static void main(String[] args) {
         /*logic and && */
         System.out.println("-------logic and &&-------");

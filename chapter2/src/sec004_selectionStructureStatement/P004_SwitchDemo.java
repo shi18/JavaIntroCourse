@@ -2,7 +2,7 @@ package sec004_selectionStructureStatement;
 
 import java.util.Scanner;
 
-public class SwitchDemo {
+public class P004_SwitchDemo {
     public static void main(String[] args) {
         /*
         需求：键盘录入数字，显示周几。

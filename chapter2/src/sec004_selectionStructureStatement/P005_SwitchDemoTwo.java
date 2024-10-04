@@ -2,7 +2,7 @@ package sec004_selectionStructureStatement;
 
 import java.util.Scanner;
 
-public class SwitchDemoTwo {
+public class P005_SwitchDemoTwo {
     public static void main(String[] args) {
 //        switchOne();
         switchTwo();

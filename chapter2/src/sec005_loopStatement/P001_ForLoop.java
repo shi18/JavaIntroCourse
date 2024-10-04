@@ -1,6 +1,6 @@
 package sec005_loopStatement;
 
-public class sec001_ForLoop {
+public class P001_ForLoop {
     public static void main(String[] args) {
         //print number 1 ~ 5
         for(int i = 1; i < 6; i++){

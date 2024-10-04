@@ -1,6 +1,6 @@
 package sec003_operators;
 
-public class ComparisonOperators {
+public class P003_ComparisonOperators {
     public static void main(String[] args) {
         // 比较运算符的返回值为布尔值
         int a = 10;

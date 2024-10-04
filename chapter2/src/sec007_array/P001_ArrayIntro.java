@@ -1,6 +1,6 @@
 package sec007_array;
 
-public class sec001_ArrayIntro {
+public class P001_ArrayIntro {
     public static void main(String[] args) {
         //普通变量
         int i = 10;

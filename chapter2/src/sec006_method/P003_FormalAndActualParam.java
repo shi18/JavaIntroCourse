@@ -2,7 +2,7 @@ package sec006_method;
 //解释形参和实参的区别
 //形参和实参虽然同名，但是互不影响，他们的作用范围仅仅局限于所在的函数中
 //如果在函数外声明两个变量a，b，那在函数内对其操作，会影响函数外部定义的变量值
-public class FormalAndActualParam {
+public class P003_FormalAndActualParam {
 
     public static int c, d;
 

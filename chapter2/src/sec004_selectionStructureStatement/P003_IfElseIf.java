@@ -3,7 +3,7 @@ package sec004_selectionStructureStatement;
 //其他运行场景，例如不同的超市会员级别，在某些物品上的打着程度不一样。
 import java.util.Scanner;
 
-public class IfElseIf {
+public class P003_IfElseIf {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请录入成绩： ");

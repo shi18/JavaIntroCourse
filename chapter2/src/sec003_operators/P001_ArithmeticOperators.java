@@ -1,6 +1,6 @@
 package sec003_operators;
 
-public class ArithmeticOperators {
+public class P001_ArithmeticOperators {
     public static void main(String[] args) {
         //加减乘除，负号，正号，取模，自增，自减
         //+-*/，-, +，%，++， --

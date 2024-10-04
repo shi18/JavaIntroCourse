@@ -1,6 +1,6 @@
 package sec006_method;
 
-public class MethodDemoOne {
+public class P001_MethodDemoOne {
     public static void main(String[] args) {
         prints();
         printsUpgrade(2, 1500,60,40);

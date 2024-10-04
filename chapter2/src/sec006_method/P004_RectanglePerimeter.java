@@ -1,6 +1,6 @@
 package sec006_method;
 
-public class RectanglePerimeter {
+public class P004_RectanglePerimeter {
     public static void main(String[] args) {
         int longSide = 20;
         int shortSide = 10;

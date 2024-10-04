@@ -2,7 +2,7 @@ package sec003_operators;
 
 import java.util.Scanner;
 
-public class TernaryOperator {
+public class P005_TernaryOperator {
     public static void main(String[] args) {
         //格式：关系表达式？表达式1：表达式2
         //如果条件成立，返回表达式1，如果条件不成立，返回表达式2
