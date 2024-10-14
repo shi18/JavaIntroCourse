@@ -1,5 +1,7 @@
 package sec002_variable;
 
+import java.util.Scanner;
+
 public class VariableDemo {
     public static void main(String[] args) {
         /* 定义变量
@@ -32,6 +34,10 @@ public class VariableDemo {
 //        System.out.println(e);
         /*一条语句可以定义多个变量, 使用较少*/
 //        int f = 1, g = 2, h = 3;
+        Scanner sc = new Scanner(System.in);
 
+        System.out.println("请输入一个数字：");
+        int input = sc.nextInt();
+        System.out.println("你输入的数字为： " + input);
     }
 }
