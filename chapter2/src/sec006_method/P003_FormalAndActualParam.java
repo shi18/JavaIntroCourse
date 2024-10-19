@@ -7,9 +7,9 @@ public class P003_FormalAndActualParam {
     public static int c, d;
 
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
-
+        int a = 5;
+        int b = 3;
+        System.out.println(a & b);
         c = 1;
         d = 4;
         System.out.println("初始的值：c = " + c + " d = " + d);
