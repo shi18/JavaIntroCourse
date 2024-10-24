@@ -28,6 +28,8 @@ public class P006_binaryOperations {
         //System.out.println(0 && 1);
         //boolean boolVal = (boolean) 0;
         System.out.println(false & true);
+        System.out.println(a&b);
+        // System.out.println(a&&b);
     }
 
     public static void printByteWithBianryFormat(byte num){
