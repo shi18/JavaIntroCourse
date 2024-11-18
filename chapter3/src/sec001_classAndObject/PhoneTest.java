@@ -11,8 +11,7 @@ public class PhoneTest {
         Phone iPhone = new Phone("苹果16 plus", 7999);
         iPhone.printPhoneInfo();
 
-        String str = "this is a test";
-        System.out.println(str.length());
-        System.out.println(str.toUpperCase());
+        Phone vivo = new Phone();
+        vivo.printPhoneInfo();
     }
 }
