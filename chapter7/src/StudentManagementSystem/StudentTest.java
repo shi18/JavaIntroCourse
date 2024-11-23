@@ -3,7 +3,15 @@ package StudentManagementSystem;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * The type Student test.
+ */
 public class StudentTest {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         ArrayList<User> userList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -21,7 +29,7 @@ public class StudentTest {
                     String inputUsername = sc.next();
                     System.out.println("请输入密码：");
                     String inputPassword = sc.next();
-                    boolean loginFlag = checkLoginUsername(inputUsername, inputPassword, userList);
+                    boolean loginFlag = checkLoginUsernamePassword(inputUsername, inputPassword, userList);
                     if (loginFlag) {
                         enterManagementSystem();
                     }
@@ -145,6 +153,9 @@ public class StudentTest {
 
     }
 
+    /**
+     * Enter management system.
+     */
     public static void enterManagementSystem() {
         ArrayList<Student> stuList = new ArrayList<>();
         while (true) {
@@ -191,7 +202,6 @@ public class StudentTest {
      *
      * @param stuList a ArrrayList<Student>
      */
-// 添加学生
     public static void addStu(ArrayList<Student> stuList) {
 
         Student stu = new Student();
@@ -199,8 +209,7 @@ public class StudentTest {
         System.out.println("请输入学生id");
         String inputId = sc.next();
         if (checkIdExisted(inputId, stuList)) {
-            System.out.println("该id已经存在，接下来的信息将会覆盖旧数据");
-            //覆盖旧数据的操作
+            System.out.println("该id已经存在，如果您想对该id操作，请使用修改操作。否则请重新输入id");
         } else {
             if (checkIdValid(inputId)) {
                 //运行到此处，说明id不存在，则可以设置id，并进行下一步
@@ -433,6 +442,13 @@ public class StudentTest {
         }
     }
 
+    /**
+     * Check username uniqueness boolean.
+     *
+     * @param userList      ArrayList<User>
+     * @param inputUsername the input username
+     * @return the boolean
+     */
     public static boolean checkUsernameUniqueness(ArrayList<User> userList, String inputUsername) {
         if (userList.isEmpty()) {
             return true;
@@ -445,6 +461,12 @@ public class StudentTest {
         return true;
     }
 
+    /**
+     * Check pass legality of password.
+     *
+     * @param firstInputPass the first input pass
+     * @return the boolean
+     */
     public static boolean checkPassLegality(String firstInputPass) {
         if (firstInputPass.length() < 8) {
             System.out.println("密码最少要8位！");
@@ -486,6 +508,13 @@ public class StudentTest {
         return true;
     }
 
+    /**
+     * Check whether the first input password match the second input password.
+     *
+     * @param firstInputPass  the first input pass
+     * @param secondInputPass the second input pass
+     * @return the boolean
+     */
     public static boolean checkDoubleInputPassMatch(String firstInputPass, String secondInputPass) {
         if (firstInputPass.equals(secondInputPass)) {
             return true;
@@ -495,6 +524,13 @@ public class StudentTest {
         }
     }
 
+    /**
+     * Check input phone number is valid or not.
+     *
+     * @param inputPhoneNum the input phone num
+     * @param userList      the user list
+     * @return the int
+     */
     public static int checkPhoneNumValid(String inputPhoneNum, ArrayList<User> userList) {
         if (inputPhoneNum.length() != 11) {
             System.out.println("手机号码长度不对！！！请重新输入");
@@ -518,6 +554,13 @@ public class StudentTest {
         return 2;
     }
 
+    /**
+     * Check secure questions' answer is valid or not.
+     *
+     * @param firstAns the first ans
+     * @param secAns   the sec ans
+     * @return the boolean
+     */
     public static boolean checkSecQuestAns(String firstAns, String secAns) {
         if (firstAns == null || firstAns.isEmpty()) {
             System.out.println("请输入第一个问题的有效答案！！！");
@@ -530,7 +573,15 @@ public class StudentTest {
         return true;
     }
 
-    public static boolean checkLoginUsername(String inputUsername, String inputPass, ArrayList<User> userList) {
+    /**
+     * Check login username and password match or not.
+     *
+     * @param inputUsername the input username
+     * @param inputPass     the input pass
+     * @param userList      the user list
+     * @return the boolean
+     */
+    public static boolean checkLoginUsernamePassword(String inputUsername, String inputPass, ArrayList<User> userList) {
         for (User user : userList) {
             if (user.getUsername().equals(inputUsername) && user.getPassword().equals(inputPass)) {
                 return true;
@@ -541,6 +592,16 @@ public class StudentTest {
 
     }
 
+    /**
+     * Check secure question and phone number match saved information or not
+     * if match, then go to reset password session.
+     *
+     * @param inputPhoneNum the input phone num
+     * @param firstAns      the first ans
+     * @param secAns        the sec ans
+     * @param userList      the user list
+     * @return the boolean
+     */
     public static boolean checkSecQuestAndPhoneNum(String inputPhoneNum, String firstAns, String secAns, ArrayList<User> userList) {
         for (User user : userList) {
             if (user.getPhoneNumber().equals(inputPhoneNum)
@@ -552,6 +613,13 @@ public class StudentTest {
         return false;
     }
 
+    /**
+     * Reset password.
+     *
+     * @param inputPhoneNum the input phone num
+     * @param userList      the user list
+     * @param newPass       the new pass
+     */
     public static void resetPass(String inputPhoneNum, ArrayList<User> userList, String newPass) {
         for (User user : userList) {
             if (user.getPhoneNumber().equals(inputPhoneNum)) {
