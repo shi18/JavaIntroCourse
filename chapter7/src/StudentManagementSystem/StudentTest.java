@@ -24,8 +24,6 @@ public class StudentTest {
                     boolean loginFlag = checkLoginUsername(inputUsername, inputPassword, userList);
                     if (loginFlag) {
                         enterManagementSystem();
-                    } else {
-                        break;
                     }
                 }
                 case "2" -> {
@@ -117,7 +115,6 @@ public class StudentTest {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    break;
                 }
                 case "3" -> {
                     System.out.println("为了找回密码请输入如下信息：");
@@ -137,11 +134,12 @@ public class StudentTest {
                     String newPass = sc.next();
                     System.out.println("请再次输入新密码：");
                     String secNewPass = sc.next();
-                    resetPass(inputPhoneNum, userList, newPass);
+                    boolean passMatchFlag = checkDoubleInputPassMatch(newPass, secNewPass);
+                    if (passMatchFlag) {
+                        resetPass(inputPhoneNum, userList, newPass);
+                    }
                 }
-                default -> {
-                    System.out.println("请输入有效的操作代码！");
-                }
+                default -> System.out.println("请输入有效的操作代码！");
             }
         }
 
@@ -165,10 +163,7 @@ public class StudentTest {
                     System.out.println("请输入要添加的学生信息");
                     addStu(stuList);
                 }
-                case "2" -> {
-
-                    removeStu(stuList);
-                }
+                case "2" -> removeStu(stuList);
                 case "3" -> {
                     System.out.println("修改学生");
                     System.out.println("请输入学生id：");
@@ -274,7 +269,7 @@ public class StudentTest {
      * @return boolean value, true means id valid.
      */
     public static boolean checkIdValid(String id) {
-        String inputId = id.toString();
+        String inputId = id;
         if (inputId.length() != 4) {
             return false;
         }
@@ -319,14 +314,12 @@ public class StudentTest {
      */
     public static void printStuInfo(ArrayList<Student> stuList) {
 
-        for (int i = 0; i < stuList.size(); i++) {
-            Student stu = stuList.get(i);
+        for (Student stu : stuList) {
             System.out.printf("id: %s    name: %s    age: %d    city: %s", stu.getId(), stu.getName(), stu.getAge(), stu.getCity());
             System.out.println();
         }
-        if (stuList.size() == 0) {
+        if (stuList.isEmpty()) {
             System.out.println("当前存储的学生信息数量为0。");
-            return;
         }
     }
 
@@ -337,9 +330,8 @@ public class StudentTest {
      */
     public static void removeStu(ArrayList<Student> stuList) {
 
-        if (stuList.size() == 0) {
+        if (stuList.isEmpty()) {
             System.out.println("当前数组链表中保存的学生信息为0条，没有可以用来删除的记录");
-            return;
         } else {
             System.out.println("删除学生");
             System.out.println("请输入要删除的学生id：");
@@ -433,7 +425,6 @@ public class StudentTest {
                 if ((inputUsername.charAt(i) <= 'z' && inputUsername.charAt(i) >= 'a')
                         || (inputUsername.charAt(i) <= 'Z' && inputUsername.charAt(i) >= 'A'
                         || (inputUsername.charAt(i) <= '9' && inputUsername.charAt(i) >= '0'))) {
-                    continue;
                 } else {
                     return false;
                 }
@@ -443,11 +434,10 @@ public class StudentTest {
     }
 
     public static boolean checkUsernameUniqueness(ArrayList<User> userList, String inputUsername) {
-        if (userList.size() == 0) {
+        if (userList.isEmpty()) {
             return true;
         }
-        for (int i = 0; i < userList.size(); i++) {
-            User u = userList.get(i);
+        for (User u : userList) {
             if (u.getUsername().equals(inputUsername)) {
                 return false;
             }
@@ -464,17 +454,18 @@ public class StudentTest {
         for (int i = 0; i < firstInputPass.length(); i++) {
             if (firstInputPass.charAt(i) >= 'a' && firstInputPass.charAt(i) <= 'z') {
                 lowerCaseCount++;
-            } else if (firstInputPass.charAt(i) >= 'A' && firstInputPass.charAt(i) <= 'Z') {
+            }
+            if (firstInputPass.charAt(i) >= 'A' && firstInputPass.charAt(i) <= 'Z') {
                 upperCaseCount++;
-            } else if (firstInputPass.charAt(i) >= '0' && firstInputPass.charAt(i) <= '9') {
+            }
+            if (firstInputPass.charAt(i) >= '0' && firstInputPass.charAt(i) <= '9') {
                 numCount++;
-            } else if (firstInputPass.charAt(i) == '!'
+            }
+            if (firstInputPass.charAt(i) == '!'
                     || firstInputPass.charAt(i) == '@'
                     || firstInputPass.charAt(i) == '#'
                     || firstInputPass.charAt(i) == '$') {
                 speicalCharCount++;
-            } else {
-                continue;
             }
         }
         if (upperCaseCount == 0) {
